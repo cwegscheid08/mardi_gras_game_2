@@ -1,4 +1,9 @@
 class GamesController < ApplicationController
+  require './lib/play_game.rb'
+  require './lib/board.rb'
+  require './lib/player.rb'
+  require './lib/round.rb'
+  attr_accessor :play_game, :board, :player, :round
   before_action :set_game, only: [:show, :edit, :update, :destroy]
 
   # GET /games
@@ -9,12 +14,22 @@ class GamesController < ApplicationController
 
   # GET /games/1
   # GET /games/1.json
+  # THIS IS WHERE I AM GOING TO HOLD THE PLAY-GAME SETUP
   def show
+    @play_game = PlayGame.new
+    # @round = Round.new
+    @player = Player.new
+    @board = Board.new
+    # exit
   end
 
   # GET /games/new
   def new
     @game = Game.new
+  end
+
+  def play
+    @play = PlayGame.new
   end
 
   # GET /games/1/edit
@@ -24,7 +39,10 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.json
   def create
+    @round = Round.new
+    # exit
     @game = Game.new(game_params)
+    @game.rounds_id = @round.id
 
     respond_to do |format|
       if @game.save

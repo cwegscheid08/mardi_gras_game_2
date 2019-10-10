@@ -1,10 +1,18 @@
 body {
-  background-color: #fff;
+  # background-color: #fff;
+  background-color: rgba(58, 81, 141, 0.35);
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+.container {
+  # background-color: rgba(58, 81, 141, 0.35);
+  background-color: #fff;
+  border-radius: 20px;
+  text-align: center;
 }
 
 p, ol, ul, td {
@@ -82,3 +90,22 @@ div {
 label {
   display: block;
 }
+
+.cell {
+  display: inline-block;
+  width: 75px;
+  height: 50px;
+  border: 1px solid rgba(155, 155, 155, 0.5);
+  border-radius: 10px;
+  background-color: rgba(155, 155, 155, 0.35);
+  margin: 5px;
+  box-shadow: 0px 5px 0px rgb(155, 155, 155);
+}
+
+.cell:hover {
+  background-color: rgba(155, 155, 155, 0.85);
+  border: 1px solid white;
+  box-shadow: 0px 5px 0px rgba(155, 155, 155, 0.35);
+}
+
+

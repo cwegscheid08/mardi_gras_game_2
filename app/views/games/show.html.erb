@@ -5,5 +5,15 @@
   <%= @game.name %>
 </p>
 
+<!-- <%= @board.display %> -->
+
+<% 14.times do %>
+	<% 15.times do %>
+		<div class="cell" ></div>
+	<% end %>
+	<br>
+<% end %>
+
+<%= link_to 'Play', edit_game_path(@game) %> | 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
