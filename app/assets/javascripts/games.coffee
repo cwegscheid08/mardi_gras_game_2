@@ -3,4 +3,3 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 cell = document.getElementById('cell');
-document.addEventListener("click", darkenBackground = (document.style.background = black);)
