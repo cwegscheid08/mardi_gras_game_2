@@ -93,14 +93,19 @@ label {
 
 #cell {
   display: inline-block;
-  width: 75px;
-  height: 50px;
+  //width: 60px;
+  //height: 40px;
+  width: 100px;
+  height: 100px;
   border: 1px solid rgba(155, 155, 155, 0.5);
   border-radius: 10px;
-  background-color: rgba(155, 155, 155, 0.35);
+  //background-color: rgba(155, 155, 155, 0.35);
+  background-image: url("localhost://app/assets/images/labelle_business_logos/wegscheid-web-services.jpg");
+  background-size: contain;
   margin: 5px;
   box-shadow: 0px 5px 0px rgb(155, 155, 155);
   vertical-align: middle;
+  overflow: hidden;
 }
 
 #cell:hover {

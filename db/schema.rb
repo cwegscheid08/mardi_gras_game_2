@@ -10,14 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_04_193556) do
+ActiveRecord::Schema.define(version: 2020_02_09_211417) do
+
+  create_table "businesses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "game_id"
+    t.index ["game_id"], name: "index_businesses_on_game_id"
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "rounds_id"
-    t.index ["rounds_id"], name: "index_games_on_rounds_id"
+    t.integer "round_id"
+    t.index ["round_id"], name: "index_games_on_round_id"
   end
 
   create_table "rounds", force: :cascade do |t|

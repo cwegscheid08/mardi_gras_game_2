@@ -7,14 +7,14 @@
 
 <!-- <%= @board.display %> -->
 
-<% 14.times do %>
-	<% 15.times do %>
-		<div id="cell">
-			<p>TEST</p>
-		</div>
-	<% end %>
-	<br>
+<% @business.each do |business| %>
+	<div id="cell">
+		<%= business.name %>
+		<%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
+	<% #exit %>
 <% end %>
+
 
 <%= link_to 'Play', edit_game_path(@game) %> | 
 <%= link_to 'Edit', edit_game_path(@game) %> |
