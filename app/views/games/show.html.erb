@@ -7,7 +7,7 @@
 
 <% @business.each do |business| %>
 	<% if business.game.id == @game.id %>	
-		<div id="cell" style="background-image: url( <%= image_path(business.picture) %>)">
+		<div id="cell" style="background-image: url(<%= image_path(business.picture) %>)">
 			<td>
 				<tr><%= business.id %></tr>
 				<tr><%= business.name %></tr>
