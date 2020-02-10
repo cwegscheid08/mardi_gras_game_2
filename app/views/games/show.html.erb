@@ -9,7 +9,13 @@
 
 <% @business.each do |business| %>
 	<div id="cell">
-		<%= business.name %>
+		<%= business.id %><br>
+		<%= business.name %><br>
+		<% if business.picture %>
+			<div id="business_photo">
+				<%= image_tag(business.picture, size: '50x50') %>
+			</div>
+		<% end %>
 		<%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
 	<% #exit %>

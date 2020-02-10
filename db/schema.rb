@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_02_09_211417) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "game_id"
