@@ -32,6 +32,7 @@
 	Business.create(name:"The Honey House", game: game, picture: 'labelle_business_logos/honey-house.jpg')
 	Business.create(name:"Mac Daddy", game: game, picture: 'labelle_business_logos/mac-daddy.jpg')
 	Business.create(name:"The Quart House", game: game, picture: 'labelle_business_logos/quart-house-logo.jpg')
+	# Business.create(name:"White's Furniture & Applicance", game: game, picture: 'labelle_business_logos/whites-furniture-&-applicances-2.jpg')
 end
 
 
