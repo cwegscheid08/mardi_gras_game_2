@@ -1,19 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @game.name %>
-</p>
+<%= content_tag(:div, content_tag(:h1, "Laissez Les Bons Temps Rouler!!!"), class: "game_title") %>
 
 <% @businesses.each do |business| %>
 	<% if business.game.id == @game.id %>	
-		<div id="cell" style="background-image: url(<%= image_path(business.picture) %>)">
+
+		<div id="cell">
 			<td>
-				<tr><%= business.id %></tr>
-				<tr><%= business.name %></tr>
-				<% #exit %>
+				
+				<tr><%= content_tag(:div, content_tag(:p, business.id), class: "business_id") %></tr>
+
+
+				<% if business.picture != "" %>
+					<tr><%= content_tag(:div, image_tag(business.picture, size: "75x75", class: "cell_image"), class: "cell_image_case") %></tr>
+				<% elsif business.name == "BLANK" %>
+					<tr><%= content_tag(:div, image_tag("labelle_business_logos/masquerade-hat.png", size: "75x75", class: "cell_image_blank"), class: "cell_image_case") %></tr>
+				<% elsif business.id.even? %>
+					<tr><%= content_tag(:div, image_tag("labelle_business_logos/masquerade-mask.png", size: "75x75", class: "cell_image"), class: "cell_image_case") %></tr>
+				<% elsif business.id.odd? %>
+					<tr><%= content_tag(:div, image_tag("labelle_business_logos/masquerade-jester.png", size: "75x75", class: "cell_image"), class: "cell_image_case") %></tr>
+			 	<% else %>
+			 	<tr><%= content_tag(:div, image_tag("labelle_business_logos/masquerade-flower.png", size: "75x75", class: "cell_image"), class: "cell_image_case") %></tr>
+				<% end %>
+
+				<% if business.name == "BLANK" %>
+					<tr><%= content_tag(:div, content_tag(:p, business.name), class: "cell_blank") %></tr>
+				<% else %>
+					<tr><%= content_tag(:div, content_tag(:p, business.name), class: "cell_name") %>
+				<% end %>
+
 				<div class="delete_button">
-					<tr><%= link_to '', business, method: :delete %></tr>
+					<% if business.name == "BLANK" %>
+						<tr><%= link_to '', business %></tr>
+					<% else %>
+						<tr><%= link_to '', business, method: :delete %></tr>
+					<% end %>
 				</div>
 			</td>
 		</div>
@@ -23,17 +44,6 @@
 <div class=".falling--confetti">
 	<%= Confetti.exploding %>
 </div>
-
-
-<div id="delete_field">
-    <%= form_tag script="setUrl", :html => {:method => :delete, remote: true} do |form|  %>
-		<strong>Select business to delete</strong>
-		<%= select_tag "businesses", options_from_collection_for_select(@businesses, "id", "id"), multiple: true, include_blank: true %>
-		<%= submit_tag "Delete Business", data: { disable_with: "Deleting..." } %>
-	<% end %>	
-</div>
-
-
 
 
 

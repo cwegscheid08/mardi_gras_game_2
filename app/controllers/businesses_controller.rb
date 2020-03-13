@@ -57,7 +57,8 @@ class BusinessesController < ApplicationController
   def destroy
     @business.destroy
     respond_to do |format|
-      format.html { redirect_to @business.game, notice: 'Business was successfully destroyed.' }
+      # exit
+      format.html { redirect_to @business.game, notice: @business.name + ' was eliminated.' }
       format.json { head :no_content }
     end
   end

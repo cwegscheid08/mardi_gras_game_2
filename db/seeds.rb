@@ -54,43 +54,43 @@
 		Business.create(name:"Joe Flint", game: game, picture: '')
 
 	# 14
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 15
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 16
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 17
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 18
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 19
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 20
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 21
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 22
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 23
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 24
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 25
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 26
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 27
 		Business.create(name:"R. Pope & L. Reed", game: game, picture: '')
@@ -138,7 +138,7 @@
 		Business.create(name:"Kevin & Margie Nelson", game: game, picture: '')
 
 	# 42
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 43
 		Business.create(name:"Max & Susan Harrelle", game: game, picture: '')
@@ -147,10 +147,10 @@
 		Business.create(name:"Jack Weaver", game: game, picture: '')
 
 	# 45
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 46
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 47
 		Business.create(name:"Shawn & Jay Reed", game: game, picture: '')
@@ -192,22 +192,22 @@
 		Business.create(name:"AAction Power Equipment", game: game, picture: 'labelle_business_logos/aaction.jpg')
 
 	# 60
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 61
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 62
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 63
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 64
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 65
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 66
 		Business.create(name:"Whited Electric", game: game, picture: '')
@@ -513,13 +513,13 @@
 		Business.create(name:"Robert & Melissa", game: game, picture: '')
 
 	# 167
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 168
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 169
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 170
 		Business.create(name:"Pat Langford", game: game, picture: '')
@@ -561,58 +561,58 @@
 		Business.create(name:"Suncoast Credit Union", game: game, picture: 'labelle_business_logos/suncoast.jpg')
 
 	# 183
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 184
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 185
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 186
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 187
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 188
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 189
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 190
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 191
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 192
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 193
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 194
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 195
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 196
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 197
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 198
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 199
-		Business.create(name:"", game: game, picture: '')
+		Business.create(name:"BLANK", game: game, picture: '')
 
 	# 200
-		Business.create(name:"", game: game, picture: '')	
+		Business.create(name:"BLANK", game: game, picture: '')	
 
 # end
 

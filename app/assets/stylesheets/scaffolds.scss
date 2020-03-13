@@ -44,6 +44,13 @@ pre {
   font-size: 11px;
 }
 
+.game_title {
+  color: white;
+  font-size: 20px;
+  margin: -95px 0px 0px 0px;
+  padding: 0px 0px 100px 0px;
+}
+
 a {
   color: #000;
 
@@ -72,7 +79,11 @@ div {
 }
 
 #notice {
-  color: green;
+  color: #650365;
+  font-size: 43px;
+  font-weight: 900;
+  min-height: auto;
+  margin: 0px 0px 0px 0px;
 }
 
 .field_with_errors {
@@ -111,6 +122,7 @@ label {
 .delete_button {
   //position: absolute;
   padding: 35px 0px 0px 0px;
+  margin: -95px 0px 0px 0px;
   z-index: 5;
   a {
     padding: 75px;
@@ -126,7 +138,8 @@ label {
   display: inline-block;
   width: auto;
   height: 120px;
-  border: 1px solid rgba(155, 155, 155, 0.5);
+  //border: 1px solid rgba(155, 155, 155, 0.5);
+  border: 1px solid rgba(0,0,0,0.7);
   border-radius: 10px;
   background-size: 60%;
   background-color: white;
@@ -137,26 +150,65 @@ label {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
+  font-size: 18px;
 }
 
 #cell:hover {
-  background-color: rgba(155, 155, 155, 0.85);
+  background-color: rgba(0, 183, 18, 0.9);
   border: 1px solid white;
   box-shadow: 0px 5px 0px rgba(155, 155, 155, 0.35);
   color: white;
-  animation-name: spin;
+  animation-name: wobble;
   animation-duration: 0.3s;  
 }
 
 #cell:active {
-  background-color: purple;
+  //background-color: purple;
+  background-color: #650365;
   animation-name: zoom;
-//  animation-duration: 0.5s;
-  animation-duration: 1.0s;
+  animation-duration: 0.5s;
+//  animation-duration: 1.0s;
 }
 
 #cell:visited {
   display: none;
+}
+
+.cell_image {
+  filter: blur(0.5px);
+  display: block;
+  margin: -40px 0px 0px 40px;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.cell_image_case {
+  z-index: 1px;
+}
+
+.cell_image_blank {
+  filter: blur(1px);
+  display: block;
+  margin: -40px 0px 0px 40px;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.business_id {
+  margin: -32px 0px 0px 115px;
+  padding: 0px;
+}
+
+.cell_name {
+  z-index: 4;
+  margin: -32px 0px 0px 0px;
+  padding: 0px 10px;
+}
+
+.cell_blank {
+  color: lightgrey;
+  margin: -32px 0px 0px 0px;
+  padding: 0px;
 }
 
 //@keyframes zoom {
@@ -192,7 +244,7 @@ label {
   }
 }
 
-@keyframes spin {
+@keyframes wobble {
   0% {
     transform: scale(1.0);
   }
