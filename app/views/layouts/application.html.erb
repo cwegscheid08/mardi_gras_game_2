@@ -4,14 +4,17 @@
     <title>MardiGrasGame2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Emilys+Candy&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="container" style="background-image: url(<%= image_path('labelle_business_logos/city-of-labelle.jpg')%>)" >
-      <%= yield %>
+    <!-- <div class="container" style="background-image: url(<%= image_path('mardi-gras-background.jpg')%>)" > -->
+    <div class="container">
+      <div class="filter">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

@@ -42,3 +42,7 @@ This might have to be used incase the game has to close suddenly.  This should c
 This is going to have to be run on a localhost and through a web browser, so this might have to be in a Rails app to help with routing(unless you want to build the routing yourself or do everything in JavaScript).  The app.rb file should initialize the game.
 
 
+
+## INTEGRATING SPOT TO BUSINESS
+
+A business can have multiple spots.  I want to be able to add an array of number which represents the spots that these businesses must occupy.

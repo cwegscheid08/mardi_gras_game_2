@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_09_211417) do
+ActiveRecord::Schema.define(version: 2020_02_29_213933) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
-    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "game_id"
+    t.string "picture"
     t.index ["game_id"], name: "index_businesses_on_game_id"
   end
 

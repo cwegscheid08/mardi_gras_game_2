@@ -14,3 +14,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+	var selected = document.forms[0][2].value;
+
+	var setUrl = function() {
+		alert "Hello, World!";
+	};
+
+	selected.onload = setUrl();
+});

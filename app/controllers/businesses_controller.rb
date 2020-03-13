@@ -10,6 +10,7 @@ class BusinessesController < ApplicationController
   # GET /businesses/1
   # GET /businesses/1.json
   def show
+    @business = Business.find(params[:id])
   end
 
   # GET /businesses/new
@@ -69,6 +70,6 @@ class BusinessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_params
-      params.require(:business).permit(:name)
+      params.require(:business).permit(:name, :picture)
     end
 end

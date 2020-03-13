@@ -12,6 +12,8 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  background: url('mardi-gras-background.jpg') fixed no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -20,13 +22,20 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   height: 80%;
+  font-family: 'Emilys Candy', cursive;
 
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: 'Emilys Candy', cursive;
+  font-size: 25px;
   line-height: 18px;
+  padding-top: 15px;
+}
+
+.filter {
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 5px;
 }
 
 pre {
@@ -101,7 +110,14 @@ label {
 
 .delete_button {
   //position: absolute;
-  padding: 80px 0px 0px 0px;
+  padding: 35px 0px 0px 0px;
+  z-index: 5;
+  a {
+    padding: 75px;
+  }
+  a:hover {
+    background-color: rgba(0,0,0,0);
+  }
 }
 
 
@@ -128,6 +144,65 @@ label {
   border: 1px solid white;
   box-shadow: 0px 5px 0px rgba(155, 155, 155, 0.35);
   color: white;
+  animation-name: spin;
+  animation-duration: 0.3s;  
 }
 
+#cell:active {
+  background-color: purple;
+  animation-name: zoom;
+//  animation-duration: 0.5s;
+  animation-duration: 1.0s;
+}
 
+#cell:visited {
+  display: none;
+}
+
+//@keyframes zoom {
+//  0% {
+//    transform: scale(1.0);
+//  }
+//  65% {
+//    transform: scale(5.0);
+//  }
+//  90% {
+//    transform: scale(4.0,0.0001);
+//  }
+//  100% {
+//    transform: scale(1.0);
+//  }
+//}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1.0);
+  }
+  10% {
+    transform: scale(2.0);
+  }
+  80% {
+    transform: scale(5.0);
+  }
+  90% {
+    transform: scale(5.0,0.1);
+  }
+  100% {
+    tranform: scale(0.1,0.1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(1.0);
+  }
+  33% {
+    transform: rotate3d(1,1,1,5deg);
+  }
+  66% {
+    transform: rotate3d(1,1,1,-5deg);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}

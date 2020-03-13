@@ -5,20 +5,36 @@
   <%= @game.name %>
 </p>
 
-<% @business.each do |business| %>
+<% @businesses.each do |business| %>
 	<% if business.game.id == @game.id %>	
 		<div id="cell" style="background-image: url(<%= image_path(business.picture) %>)">
 			<td>
 				<tr><%= business.id %></tr>
 				<tr><%= business.name %></tr>
+				<% #exit %>
 				<div class="delete_button">
-					<tr><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></tr>
+					<tr><%= link_to '', business, method: :delete %></tr>
 				</div>
 			</td>
 		</div>
-		<% #exit %>
 	<% end %>
 <% end %>
+
+<div class=".falling--confetti">
+	<%= Confetti.exploding %>
+</div>
+
+
+<div id="delete_field">
+    <%= form_tag script="setUrl", :html => {:method => :delete, remote: true} do |form|  %>
+		<strong>Select business to delete</strong>
+		<%= select_tag "businesses", options_from_collection_for_select(@businesses, "id", "id"), multiple: true, include_blank: true %>
+		<%= submit_tag "Delete Business", data: { disable_with: "Deleting..." } %>
+	<% end %>	
+</div>
+
+
+
 
 
 <%= link_to 'Play', edit_game_path(@game) %> | 

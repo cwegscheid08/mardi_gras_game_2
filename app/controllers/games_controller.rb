@@ -16,7 +16,8 @@ class GamesController < ApplicationController
   # GET /games/1.json
   # THIS IS WHERE I AM GOING TO HOLD THE PLAY-GAME SETUP
   def show
-    @business = Business.all
+    @businesses = Business.all
+    # @business = Business.find(params[:id])
     @game = Game.find(params[:id])
   end
 
