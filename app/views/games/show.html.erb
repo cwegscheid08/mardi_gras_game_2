@@ -13,7 +13,7 @@
 		<div class="winner_notice" onload="playWinAudio()">
 			<h1>CONGRATULATIONS TO <br><br><br><br><div class="winner_frame animated bounce"><span class="winner_name"><%= business.name.upcase + "!!!" %></span></div></h1>
 		</div>
-	<% elsif business.game.id == @game.id %>	
+	<% elsif business.game.id == @game.id && business.name != 'BLANK' %>	
 
 		<div id="cell" onclick="window.requestAnimationFrame(confetti.start), playAudio()">
 			<td>
@@ -22,7 +22,7 @@
 
 
 				<% if business.picture != "" %>
-					<tr><%= content_tag(:div, image_tag(business.picture, size: "75x75", class: "cell_image"), class: "cell_image_case") %></tr>
+					<tr><%= content_tag(:div, image_tag(business.picture, style: 'height:auto;width:75px;padding-top:20px', class: "cell_image"), class: "cell_image_case", style: 'height:75px;') %></tr>
 				<% elsif business.name == "BLANK" %>
 					<tr><%= content_tag(:div, image_tag("labelle_business_logos/masquerade-hat.png", size: "75x75", class: "cell_image_blank"), class: "cell_image_case") %></tr>
 				<% elsif business.id.even? %>
