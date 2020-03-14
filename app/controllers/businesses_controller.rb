@@ -58,7 +58,7 @@ class BusinessesController < ApplicationController
     @business.destroy
     respond_to do |format|
       # exit
-      format.html { redirect_to @business.game, notice: @business.name + ' was eliminated.' }
+      format.html { redirect_to @business.game, notice: 'Sorry ' + @business.name + ', maybe next year.' }
       format.json { head :no_content }
     end
   end

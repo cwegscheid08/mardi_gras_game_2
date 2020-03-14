@@ -5,7 +5,7 @@
 <% @businesses.each do |business| %>
 	<% if business.game.id == @game.id %>	
 
-		<div id="cell">
+		<div id="cell" onclick="window.requestAnimationFrame(confetti.start), playAudio()">
 			<td>
 				
 				<tr><%= content_tag(:div, content_tag(:p, business.id), class: "business_id") %></tr>
@@ -42,9 +42,15 @@
 <% end %>
 
 <div class=".falling--confetti">
-	<%= Confetti.exploding %>
-</div>
 
+	<audio id="myAudio">
+	  <source src="<%= audio_path("458398__breviceps__balloon-pop-christmas-cracker-confetti-cannon.wav") %>" type="audio/wav">
+	  Your browser does not support the audio element.
+	</audio>
+
+	<button onclick="playAudio()" type="button">Play Audio</button>
+
+</div>
 
 
 <%= link_to 'Play', edit_game_path(@game) %> | 

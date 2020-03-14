@@ -4,6 +4,7 @@
     <title>MardiGrasGame2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- <script src="confetti.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Emilys+Candy&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,5 +17,15 @@
         <%= yield %>
       </div>
     </div>
+
+    <script type="text/javascript">
+      
+      var x = document.getElementById("myAudio"); 
+
+      function playAudio() { 
+        x.play(); 
+      }
+
+    </script>
   </body>
 </html>

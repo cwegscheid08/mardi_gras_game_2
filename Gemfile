@@ -36,7 +36,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 # gem 'capistrano-rails', group: :development
 
 # ADDING CONFETTI
-gem 'funfetti'
+# gem 'funfetti'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
