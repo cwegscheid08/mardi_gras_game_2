@@ -133,6 +133,24 @@ label {
   }
 }
 
+.winner_notice h1 {
+  font-size: 50px;
+  color: purple;
+  min-height: 200px;
+  min-width: 800px;
+  padding-top: 100px;
+}
+
+.winner_name {
+  color: green;
+  font-size: 75px;
+  min-width: 200px;
+}
+
+.winner_frame {
+  animation-duration: 10s;
+  min-width: 200px;
+}
 
 
 #cell {

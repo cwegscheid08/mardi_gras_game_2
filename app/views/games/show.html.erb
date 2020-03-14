@@ -1,9 +1,19 @@
-<p id="notice"><%= notice %></p>
+<% if @businesses.count != 1 %>
+	<p id="notice"><%= notice %></p>
 
-<%= content_tag(:div, content_tag(:h1, "Laissez Les Bons Temps Rouler!!!"), class: "game_title") %>
+	<%= content_tag(:div, content_tag(:h1, "Laissez Les Bons Temps Rouler!!!"), class: "game_title") %>
+<% end %>
+
+
+
 
 <% @businesses.each do |business| %>
-	<% if business.game.id == @game.id %>	
+
+	<% if @businesses.count == 1 %>
+		<div class="winner_notice" onload="playWinAudio()">
+			<h1>CONGRATULATIONS TO <br><br><br><br><div class="winner_frame animated bounce"><span class="winner_name"><%= business.name.upcase + "!!!" %></span></div></h1>
+		</div>
+	<% elsif business.game.id == @game.id %>	
 
 		<div id="cell" onclick="window.requestAnimationFrame(confetti.start), playAudio()">
 			<td>
@@ -39,18 +49,15 @@
 			</td>
 		</div>
 	<% end %>
-<% end %>
+<% end %><br><br><br><br>
 
-<div class=".falling--confetti">
+<audio id="myAudio">
+	<source src="<%= audio_path("458398__breviceps__balloon-pop-christmas-cracker-confetti-cannon.wav") %>" type="audio/wav">
+</audio>
 
-	<audio id="myAudio">
-	  <source src="<%= audio_path("458398__breviceps__balloon-pop-christmas-cracker-confetti-cannon.wav") %>" type="audio/wav">
-	  Your browser does not support the audio element.
-	</audio>
-
-	<button onclick="playAudio()" type="button">Play Audio</button>
-
-</div>
+<audio id="myWinAudio">
+	<source src="<%= audio_path("484267__inspectorj__party-pack-horn-coil-01-long-01.wav") %>" type="audio/wav">
+</audio>
 
 
 <%= link_to 'Play', edit_game_path(@game) %> | 
